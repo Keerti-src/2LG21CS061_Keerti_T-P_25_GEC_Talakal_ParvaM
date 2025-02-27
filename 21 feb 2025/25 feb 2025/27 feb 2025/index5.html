@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: white;
+  flex-wrap: nowrap;
+  border-style: outset;
+}
+.flex-container > div {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 25px;
+}
+.collab-color-class {
+  font-size: 50px;
+  background: linear-gradient(to right,
+   #f30202, #e72424, #f9a825, #f9a825,#ffe592);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="collab-color-class"><b>Collab.</b></div>
+  <div style="flex-grow:100;"></div>
+  <div style="flex-grow:1; "><b>Home</b></div>
+  <div style="flex-grow:1;opacity:0.3;">About</div>
+  <div style="flex-grow:1;opacity:0.3">Services</div>
+  <div style="flex-grow:1;opacity:0.3 ">Contact</div>
+  <div style="flex-grow:1;opacity:0.3 ">About</div>
+
+</div>
+
+</body>
+</html>
+
