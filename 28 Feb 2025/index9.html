@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: DodgerBlue;
+          }
+          
+          .flex-container > div {
+            background-color: #e27b7b;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+          }
+          @media screen and (max-width: 992px) {
+            .flex-container {
+                display: flex;
+                flex-direction: column-reverse;
+                background-color: DodgerBlue;
+              }
+              
+              .flex-container > div {
+                background-color: #2092a1;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The flex-direction Property</h1>
+
+<p>flex-direction: row; stacks the flex items horizontally (from left to right):</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
+
+
+
+            
+        
