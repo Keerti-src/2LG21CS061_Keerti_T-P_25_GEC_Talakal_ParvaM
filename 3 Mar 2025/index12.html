@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EXAMPLE</title>
+    </head>
+    <body>
+            <div>
+                <label for="txt1">value1</label>
+                <input type="text" id="val1" name="val1" value="" placeholder="enter your value1">
+            </div>
+            <div>
+                <label for="txt2">value2</label>
+                <input type="text" id="val2" name="val2" value="" placeholder="enter your value2">
+            </div>
+            <div>
+                <label for="txt3">value3</label>
+                <input type="text" id="val3" name="val3" value="" placeholder="enter your value3">
+            </div>
+                <div>
+                    <button onclick="getResult()">submit</button>
+                </div>
+            <h1 style="color:rgb(255, 0, 140)"; id="flname">
+
+            </h1>
+        <script>
+            function  getResult (){
+                var val1 =document.getElementById('val1').value;
+                var val2 =document.getElementById('val2').value;
+                var val3 =document.getElementById('val3').value;
+                var result;
+                if(!isNaN(val1) && !isNaN(val2) && !isNaN(val3)){
+                    result= parseFloat(val1) + parseFloat(val2) + parseFloat(val3);
+                }else{
+                    result = val1 + val2 + val3;
+                }
+                document.getElementById('flname').innerHTML = result;
+
+            }
+
+        </script>
+    </body>
+</html>
