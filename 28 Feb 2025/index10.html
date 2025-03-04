@@ -13,34 +13,33 @@
 body {
   font-family: 'Times New Roman';
   margin: 0;
-  font-size:large;
-  
+}
+
 /* Header/logo Title */
 .header {
   text-align: center;
-  color:white;
+  color: white;
 }
-}
+
 /* Style the top navigation bar */
 .navbar {
-    display: flex;
-    background-color: #333;
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+  display: flex;
+  background-color: #333;
+}
 
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 /* Column container */
 .row {  
@@ -78,92 +77,75 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 776px) {
   .row, .navbar {   
     flex-direction: column;
   }
 }
-
 </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <div class="navbar">
-    <a href="#" style="flex-grow: 30;text-align: left;">AGRICULTURE</a>
+    <a href="#" style="flex-grow: 30;"></a>
     <a href=""style="flex-grow:0.5;">HOME</a>
     <a href="https://www.icar.org.in/about-us"style="flex-grow:0.5;">ABOUT US</a>
-    <a href="https://en.m.wikipedia.org/wiki/Agriculture"style="flex-grow:0.5;">CROP DETAILS</a>
-    <a href="https://www.icar.org.in/contact-us"style="flex-grow:0.5;">CONTACTS</a>
-    <a href="https://www.icar.org.in/crop-science/crop-science"style="flex-grow:0.5;">DIVISIONS</a>
-
-
+    <a href="https://weddingsbythilak.com/wedding-services-in-bangalore/"style="flex-grow:0.5;">SERVICES</a>
+    <a href="https://www.inevent.in/gallery/"style="flex-grow:0.5;">GALLERY</a>
+    <a href="https://www.inevent.in/contact-us/"style="flex-grow:0.5;">CONTACTS</a>
+    <a href="https://www.inevent.in/contact-us/"style="flex-grow:0.5;">CONTACTS</a>
   </div>
+
+
+<!-- Note -->
+<div style="background:WHITE;padding:5px;">
+  <h4 style="text-align:center;color:red; font-size:large;">WEDDING MANAGEMENT SYSTEM.</h4>
+</div>
 
 <!-- Header -->
 <div class="header">
-  <img src="farmer3.jpg" alt="Girl in a jacket" style="width:100%;display:flex;align-items:center">
+  <img src="w6.png" alt="Girl in a jacket" style="width:100%;display:flex;align-items:center">
 
+</div>
+<!-- Note -->
+<div style="background:WHITE;padding:5px">
+  <h2 style="text-align:center">Weddings are like art, each has its own story to tell. </h2>
 </div>
 
 <!-- The flexible grid (content) -->
 <div class="row">
   <div class="side">
-    <h2 style="color:darkblue;">ROLE OF AGRICULTURE</h2>
-    <h4>Important</h4>
-    <div>
-        <img src="ROLE.jpg" alt="Girl in a jacket" style="width:100%">
-    </div>
-    <p>Agriculture is important because it provides food, fiber, and raw materials for industry. It also helps to create jobs, strengthen economies, and reduce poverty. </p>
-    <h2 style="color: darkred;">Crop alteration and biotechnology</h2>
-    <div>
-      <h4>Seedlings in a green house.</h4>
-        <img src="global.png" alt="Girl in a jacket" style="width:100%">
-    </div><br>
-    <div>
-      <h4>Genetic engineering</h4>
-        <img src="image8.png" alt="Girl in a jacket" style="width:100%">
-        <h4>Spraying a crop with a pesticide</h4>
-    </div><br>
-    <div>
-        <img src="PESTISIDE.jpg" alt="Girl in a jacket" style="width:100%">
-    </div>
+    <h1> All <i>About Us</i></h1>
+    <h5>Photo of me:</h5>
+    <img src="w5.png" alt="Girl in a jacket" style="width:100%">
+    <p>Welcome to INeVENTs, where we believe that your special day deserves to be nothing less than extraordinary. We understand that planning a wedding can be overwhelming, and that's why we are here to help make your dreams come true. We will take the time to get to know you and your love story and work tirelessly to create an event that is uniquely yours, filled with unforgettable moments and cherished memories. With our unparalleled attention to detail, commitment to perfection, and expertise of 8 years, you can relax and enjoy the journey to your big day, knowing that every little detail is taken care of with love and care.</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
   </div>
   <div class="main">
-    <h2 style="color: coral;">MODERN AGRICULTURE</h2>
-    <h4>a center pivot irrigation system on a field</h4>
-
-    <div>
-        <img src="modern1.png" alt="Girl in a jacket" style="width:100%;">
-    </div>
-    <ul>
-      <li>Agriculture encompasses crop and livestock production, aquaculture, and forestry for food and non-food products.Agriculture was a key factor in the rise of sedentary human civilization, whereby farming of domesticated species created food surpluses that enabled people to live in the cities. </li>
-      <li>The major agricultural products can be broadly grouped into foods, fibers, fuels, and raw materials (such as rubber). Food classes include cereals (grains), vegetables, fruits, cooking oils, meat, milk, eggs, and fungi. </li>
-      <li>Modern agronomy, plant breeding, agrochemicals such as pesticides and fertilizers, and technological developments have sharply increased crop yields, but also contributed to ecological and environmental damage. Selective breeding and modern practices in animal husbandry have similarly increased the output of meat, but have raised concerns about animal welfare and environmental damage. </li>
-    </ul>
+    <h1>WEDDING MANAGEMENT SYSTEM.</h1>
+    <h3>Wedding Packages</h3>
+    <img src="packages.png" alt="Girl in a jacket" style="width:100%">
+    <p>A wedding is a ceremony in which two people are united in marriage. Wedding traditions and customs vary greatly between cultures, ethnicities, races, religions, denominations, countries, social classes, and sexual orientations.</p>
+    <p>Essentially, wedding packages are a way to simplify the often overwhelming process of planning a wedding. They represent a pre-arranged collection of wedding services, offered by venues or vendors, that are bundled together for a set price. This bundling aims to create a more convenient and streamlined experience for couples, as opposed to sourcing each individual service separately. By consolidating elements like venue rental, catering, decorations, and photography, these packages offer a more straightforward approach to budgeting and planning. Ultimately, they're designed to provide a more cohesive and less stressful path to creating a complete wedding experience.</p>
     <br>
-    <h2 style="color: darkmagenta;">PLANT BREEDING</h2>
-    <h4>Wheat cultivar tolerant of high salinity (left) compared with non-tolerant variety</h4>
-    <div>
-        <img src="PLANT.jpg" alt="Girl in a jacket" style="width:100%">
-    </div>
-    <p>Crop alteration has been practiced by humankind for thousands of years, since the beginning of civilization. Altering crops through breeding practices changes the genetic make-up of a plant to develop crops with more beneficial characteristics for humans, for example, larger fruits or seeds, drought-tolerance, or resistance to pests.</p>
-    <p> Significant advances in plant breeding ensued after the work of geneticist Gregor Mendel. His work on dominant and recessive alleles, although initially largely ignored for almost 50 years, gave plant breeders a better understanding of genetics and breeding techniques. Crop breeding includes techniques such as plant selection with desirable traits, self-pollination and cross-pollination, and molecular techniques that genetically modify the organism</p>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2024</h5>
+    
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-  <P>Follow Us</P>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-        <i class="material-icons">facebook</i>
-        <i class="material-icons">telegram</i>
-        <i class="material-icons">home</i>
-        <i class="material-icons">mail</i>
-        <i class="material-icons">cloud</i>
-
+  <h2>Footer</h2>
 </div>
 
 </body>
 </html>
+
 

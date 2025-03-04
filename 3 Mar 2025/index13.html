@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS EXAMPLE</title>
-    </head>
-    <body>
-            <div>
-                <label for="txt1">first name</label>
-                <input type="text" id="val1" name="val1" value="" placeholder="enter your first name">
-            </div>
-            <div>
-                <label for="txt2">last name</label>
-                <input type="text" id="val2" name="val2" value="" placeholder="enter your last name">
-            </div>
-                <div>
-                    <button onclick="getResult()">submit</button>
-                </div>
-            <h1 style="color:rgb(255, 0, 140)"; id="flname">
+</head>
 
-            </h1>
+<body>
+        <div>
+            <label for="txt1" style="color: rgb(255, 0, 0);">Value 1</label>
+            <input type="text" id="val1" placeholder="Enter your value 1">
+        </div>
+        <br>
+        <div>
+            <label for="txt2" style="color: rgb(255, 0, 0);">Value 2</label>
+            <input type="text" id="val2" placeholder="Enter your value 2">
+        </div>
+        <br>
+        <div>
+            <button onclick="getResult()">SUBMIT</button>
+        </div>
+        <h2 style="color:rgba(255, 0, 0, 0.514)"; id="result"></h2>
+    <div id="result"></div>
+  
+
         <script>
-            function  getResult (){
-                var val1 =document.getElementById('val1').value;
-                var val2 =document.getElementById('val2').value;
-                var result;
-                if(!isNaN(val1) && !isNaN(val2)){
-                    result= parseFloat(val1) + parseFloat(val2);
-                }else{
-                    result = val1 + val2;
+            function getResult(){
+                 val1 = document.getElementById("val1").value;
+                 val2 = document.getElementById("val2").value;
+                 resultDiv = document.getElementById("result");
+
+
+                if(!isNaN(val1) && !isNaN(val2) ){
+                 addition = parseFloat(val1) + parseFloat(val2);
+                 subtraction = parseFloat(val1) - parseFloat(val2);
+                 multiplication = parseFloat(val1) *parseFloat(val2);
+                 division = parseFloat(val1)/parseFloat(val2);
+                 modulus = parseFloat(val1) % parseFloat(val2);
+                 resultDiv.innerHTML = `
+                    <p>Addition: ${addition}</p>
+                    <p>Subtraction: ${subtraction}</p>
+                    <p>Multiplication: ${multiplication}</p>
+                    <p>Division: ${division}</p>
+                    <p>modulus: ${modulus}</p>
+                `;
+                }else {
+                     normalConcat = val1 + val2;
+                     reverseConcat = val2 + val1;
+    
+                    resultDiv.innerHTML = `
+                        <p>Concatenation: ${normalConcat}</p>
+                        <p>Reverse Concatenation: ${reverseConcat}</p>
+                    `;
                 }
-                document.getElementById('flname').innerHTML = result;
-
             }
-
         </script>
-    </body>
+</body>
 </html>
