@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Ex 1</title>
+</head>
+<style>
+    table, th, td {
+    border:3px solid black;
+    border-collapse:collapse;
+    padding :30px;
+    text-align: center;
+    width: 90%;
+    }
+    </style>
+<body>
+    
+
+        <h1 style="color: rgb(255, 0, 34);text-align:center"> JS Example 2</h1>
+    
+        <div style="text-align: center;">
+        <label for="txt1">Value1</label>
+        <input type="text"id="val1" value="" name="val1" placeholder="Enter number"></div><br>
+        <div style="text-align: center;">
+            <label for="txt2">Value2</label>
+            <input type="text"id="val2" value="" name="val2" placeholder="Enter number"></div><br>
+        
+            <div style="text-align: center;"><button onclick="getResult()">submit </button></div> 
+            <div>
+
+        <h1 style="color: rgba(0, 3, 5, 0.904);" id="flnumber"></h1>
+        <div id="flnumber"></div>
+   
+        <script>
+            function getResult(){
+                var val1 =document.getElementById('val1').value;
+                var val2 =document.getElementById('val2').value;
+                var result;
+    
+                if(!isNaN(val1) && !isNaN(val2)){
+                  
+                    if (val1 < 10 && val2 < 10) {
+                    let diffOfSquares = (parseFloat(val1) - parseFloat(val2)) * (parseFloat(val1) + parseFloat(val2));
+                    let sumOfSquares = (parseFloat(val1)*parseFloat(val1)) +(2*parseFloat(val1) * parseFloat(val2))+(parseFloat(val2)*parseFloat(val2));
+                    let squareOfSum = (parseFloat(val1)+ parseFloat(val2))*(parseFloat(val1)-parseFloat(val2))-(2*parseFloat(val1)*parseFloat(val2));
+                    let squareOfDiff = (parseFloat(val1)*parseFloat(val1))-(2*parseFloat(val1)*parseFloat(val2))+(parseFloat(val2)*parseFloat(val2));
+                    let diffOfCubes = (parseFloat(val1) -parseFloat(val2)) * ((parseFloat(val1) *parseFloat(val1) ) + (parseFloat(val1) * parseFloat(val2)) +(parseFloat(val2 )*parseFloat(val2)));
+
+                    result = `
+                        <table>
+                            
+                            <tr>
+                                <td>a<sup>2</sup>- b<sup>2</sup>=(a-b)*(a+b)
+                                <br>(${val1} - ${val2})(${val1} + ${val2})
+                                <br>${diffOfSquares}=${diffOfSquares}</td>
+                            </tr>
+                            <tr>
+                                <td>(a + b)<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup>+(2*a*b)
+                                <br>${val1}<sup>2</sup>+ 2(${val1}<sup>2</sup>) + ${val2}<sup>2</sup>}
+                                <br>${sumOfSquares}=${sumOfSquares}</td>
+                            </tr>
+                            <tr>
+                                <td>a<sup>2</sup> + b<sup>2</sup>=(a+b)<sup>2</sup>-(2*a*b)
+                                <br>(${val1} + ${val2})<sup>2</sup>) - 2(${val1}<sup>2</sup>)
+                                <br>${squareOfSum}=${squareOfSum}</td>
+                            </tr>
+                            <tr>
+                                <td>(a - b)<sup>2</sup>=(a)<sup>2</sup>-(2*a*b)+(b)<sup>2</sup>
+                                <br>${val1}<sup>2</sup> - 2(${val1} * ${val2}) + ${val2}<sup>2</sup>
+                                <br>${squareOfDiff}=${squareOfDiff}</td>
+                            </tr>
+                            <tr>
+                                <td>a<sup>3</sup> - b<sup>3</sup>=(a-b)(a<sup>2</sup>+a*b+b<sup>2</sup>)
+                                <br>(${val1} - ${val2})(${val1}<sup>2</sup> + ${val1} × ${val2} + ${val2}<sup>2</sup>)
+                                <br>${diffOfCubes}=${diffOfCubes}</td>
+                            </tr>
+                        </table>
+                    `;
+                    }else{
+                    let resulta=parseFloat(val1)+parseFloat(val2);
+                    let results=parseFloat(val1)-parseFloat(val2);
+                    let resultm=parseFloat(val1)*parseFloat(val2);
+                    let resultd=parseFloat(val1)/parseFloat(val2);
+                    let resultmod=parseFloat(val1)%parseFloat(val2);
+                    let resultinc=parseFloat(val1);
+                    let resultdec=parseFloat(val2);
+                    let resultexe=parseFloat(val1)**parseFloat(val2);
+                     result= `
+                        <table>
+                           <tr>
+                             <th>X</th>
+                             <th>Y</th>
+                             <th>OP</th>
+                             <th>EXP</th>
+                             <th>Result</th>
+                         </tr>
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>+</td>
+                             <td>${val1}+${val2}</td>
+                             <td>${resulta}</td>
+                         </tr>
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>-</td>
+                             <td>${val1}-${val2}</td>
+                             <td>${results}</td>
+                         </tr>
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>*</td>
+                             <td>${val1}*${val2}</td>
+                             <td>${resultm}</td>
+                         </tr>
+                 
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>/</td>
+                             <td>${val1}+${val2}</td>
+                             <td>${resultd}</td>
+                         </tr>
+                 
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>%</td>
+                             <td>${val1}+${val2}</td>
+                             <td>${resultmod}</td>
+                         </tr>
+                 
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>++</td>
+                             <td>++${val1}</td>
+                             <td>${++resultinc}</td>
+                         </tr>
+                 
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>--</td>
+                             <td>--${val2}</td>
+                             <td>${--resultdec}</td>
+                         </tr>
+                         <tr>
+                             <td>${val1}</td>
+                             <td>${val2}</td>
+                             <td>**</td>
+                             <td>${val2}**${val2}</td>
+                             <td>${resultexe}</td>
+                         </tr>
+                     </table>
+                     `;
+
+                }
+
+            } else{
+               let resultconcat=val1+val2;
+               let reverseString=resultconcat.split('').reverse().join('');
+               
+               result= `
+               <table >
+        <tr>
+          <th>X</th>
+          <th>Y</th>
+          <th>Concat</th>
+          <th>Reverse</th>
+          <th>length</th>
+          
+          
+        </tr>
+        <tr>
+          <td>${val1}</td>
+          <td>${val2}</td>
+          <td>${resultconcat}</td>
+          <td>${reverseString}</td>
+          <td>${resultconcat.length}</td>
+          
+          
+       </tr>
+       
+      </table>`
+      ;
+            }
+            document.getElementById('flnumber').innerHTML=result;
+        }
+        </script>
+    </div>
+    </body>
+    </html>
