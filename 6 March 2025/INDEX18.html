@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shape Selection and Display</title>
+    <style>
+        #shapeInputs {
+            display: none;
+        }
+
+        .dimension-input {
+            display: none;
+        }
+
+            
+    </style>
+</head>
+
+<body>
+
+    <h2>Select a Shape</h2>
+
+    <select id="shapeSelect">
+        <option value="">Select a shape</option>
+        <option value="circle">Circle</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+    </select>
+
+    <div id="shapeInputs">
+        <div id="rectangleInputs" class="dimension-input">
+            <label for="rectangleWidth">Width:</label>
+            <input type="number" id="rectangleWidth"><br>
+            <label for="rectangleHeight">Height:</label>
+            <input type="number" id="rectangleHeight"><br>
+        </div>
+
+        <div id="squareInputs" class="dimension-input">
+            <label for="squareSide">Side:</label>
+            <input type="number" id="squareSide"><br>
+        </div>
+
+        <div id="triangleInputs" class="dimension-input">
+            <label for="triangleBase">Base:</label>
+            <input type="number" id="triangleBase"><br>
+            <label for="triangleHeight">Height:</label>
+            <input type="number" id="triangleHeight"><br>
+        </div>
+
+        <div id="circleInputs" class="dimension-input">
+            <label for="circleRadius">Radius:</label>
+            <input type="number" id="circleRadius"><br>
+        </div>
+    </div>
+
+    <button id="drawButton" style="display: none;">Draw Shape</button>
+
+    <div id="shapeDisplay">
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+    </div>
+
+    <script>
+        const shapeSelect = document.getElementById('shapeSelect');
+        const shapeInputs = document.getElementById('shapeInputs');
+        const rectangleInputs = document.getElementById('rectangleInputs');
+        const squareInputs = document.getElementById('squareInputs');
+        const triangleInputs = document.getElementById('triangleInputs');
+        const circleInputs = document.getElementById('circleInputs');
+        const drawButton = document.getElementById('drawButton');
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        shapeSelect.addEventListener('change', function () {
+            const selectedShape = shapeSelect.value;
+            shapeInputs.style.display = selectedShape ? 'block' : 'none';
+            drawButton.style.display = selectedShape ? 'block' : 'none';
+
+            rectangleInputs.style.display = selectedShape === 'rectangle' ? 'block' : 'none';
+            squareInputs.style.display = selectedShape === 'square' ? 'block' : 'none';
+            triangleInputs.style.display = selectedShape === 'triangle' ? 'block' : 'none';
+            circleInputs.style.display = selectedShape === 'circle' ? 'block' : 'none';
+        });
+
+        drawButton.addEventListener('click', function () {
+            const selectedShape = shapeSelect.value;
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous drawing
+
+            if (selectedShape === 'rectangle') {
+                const width = parseInt(document.getElementById('rectangleWidth').value);
+                const height = parseInt(document.getElementById('rectangleHeight').value);
+                ctx.fillRect(50, 50, width, height);
+            } else if (selectedShape === 'square') {
+                const side = parseInt(document.getElementById('squareSide').value);
+                ctx.fillRect(50, 50, side, side);
+            } else if (selectedShape === 'triangle') {
+                const base = parseInt(document.getElementById('triangleBase').value);
+                const height = parseInt(document.getElementById('triangleHeight').value);
+                ctx.beginPath();
+                ctx.moveTo(50, 50 + height);
+                ctx.lineTo(50 + base, 50 + height);
+                ctx.lineTo(50 + (base / 2), 50);
+                ctx.closePath();
+                ctx.fill();
+            } else if (selectedShape === 'circle') {
+                const radius = parseInt(document.getElementById('circleRadius').value);
+                ctx.beginPath();
+                ctx.arc(500, 500, radius, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
