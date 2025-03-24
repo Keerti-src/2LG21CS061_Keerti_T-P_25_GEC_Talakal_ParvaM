@@ -8,11 +8,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+  <div th:replace="fragment/nav :: nav"></div>
 
 <div class="container mt-3">
     <h2>Employee List</h2>
     <a th:href="@{/keerti/create}" class="btn btn-warning m-3">Add Employee</a>
     <a th:href="@{/users/create}" class="btn btn-warning m-3">Add Student</a>
+    <a th:href="@{/poori/create}" class="btn btn-warning m-3">Add Staff</a>
     <table class="table table-success table-striped">
     <thead class="table-dark">
       <tr>
@@ -23,6 +25,8 @@
         <th>DOB</th>
         <th>Adress</th>
         <th>Gender</th>
+        <th>Section</th>
+        <th>Topic</th>
         <th>Photo</th>
         <th>action</th>
       </tr>
@@ -36,6 +40,8 @@
         <td  th:text="${emp.DOB}"></td>
         <td  th:text="${emp.adress}"></td>
         <td  th:text="${emp.gender}"></td>
+        <td  th:text="${emp.section}"></td>
+        <td  th:text="${emp.topic}"></td>
         <td  th:text="${emp.photo}"></td>
         <td>
           <a th:href="@{/keerti/edit/{id}(id=${emp.id})}" class="btn btn-primary">Edit</a>

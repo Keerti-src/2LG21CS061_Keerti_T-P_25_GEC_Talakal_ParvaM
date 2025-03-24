@@ -19,8 +19,10 @@ public class Student {
     private String DOB;
     private String adress;
     private String gender;
+    private String section;
     private String usn;
     private String photo;
+    private String topic;
 
     public Long getId() {
         return id;
@@ -78,6 +80,14 @@ public class Student {
         this.gender = gender;
     }
 
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
     public String getUsn() {
         return usn;
     }
@@ -92,6 +102,14 @@ public class Student {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 
 }

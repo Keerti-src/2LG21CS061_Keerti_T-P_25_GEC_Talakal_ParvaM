@@ -16,6 +16,7 @@
         
 </head>
 <body>
+    <div th:replace="fragment/nav :: nav"></div>
 
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="w-50">
@@ -41,15 +42,35 @@
                     <label for="employeetAdress">Adress</label>
                     <input type="text" class="form-control" id="employeeAdress" th:field="*{adress}" placeholder="Enter employee Adress">
                 </div>
+                <div class="form-check">
+                    <label for="employeetGender">Gender</label><br>
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="male" th:field="*{gender}">
+                    <label class="form-check-label" for="gridRadios1">
+                     Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="female" th:field="*{gender}">
+                    <label class="form-check-label" for="gridRadios2">
+                      Female
+                    </label>
+                </div>
                 <div class="form-group">
-                    <label for="gender">Gender:</label><br>
-                    <select id="gender" name="gender">
+                    <label for="section">Section:</label><br>
+                    <select id="section" name="section">
                         <option value=""></option>
-                        <option value=" Male"> Male</option>
-                        <option value="Female"> Female</option>
-                        <option value="Other"> Other</option>
-                    </select><br>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
                 </div>
+      <div class="form-group">
+        <label for="topic">Topic:</label><br>
+        <input type="checkbox" id="nature" name="topic" th:field="*{topic}" placeholder="Enter employee topic1" value="nature">
+        <label for="topic1"> Nature</label><br>
+        <input type="checkbox" id="Horror" name="topic"  th:field="*{topic}" placeholder="Enter employee topic2"  value="horror">
+        <label for="topic2"> Horror</label><br>
+    </div>
       <div class="form-group">
         <label for="employeePhoto">Photo</label>
         <input type="file" class="form-control" id="employeePhoto" th:field="*{photo}" placeholder="Enter employee Photo">
@@ -61,5 +82,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

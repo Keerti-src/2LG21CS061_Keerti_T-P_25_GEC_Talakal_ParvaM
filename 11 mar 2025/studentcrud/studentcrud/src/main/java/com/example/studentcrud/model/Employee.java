@@ -20,6 +20,8 @@ public class Employee {
     private String DOB;
     private String adress;
     private String gender;
+    private String section;
+    private String topic;
     private String photo;
 
     public Long getId() {
@@ -76,6 +78,22 @@ public class Employee {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
     }
 
     public String getPhoto() {
